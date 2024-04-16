@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.headerMain {
+    height: 190px;
+    width: 100%;
+}
+
+.firstHeader {
+    height:60px; 
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phoneEmail {
+    width: 30%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    color: white;
+}
+.nameLogout {
+    width: 30%;
+    color: white;
+    height: 60px;
+}
+
+.phone, .email {
+    display: flex;
+    height: 30px;
+    vertical-align: middle;
+    align-items: center;
+    gap: 16px;
+}
