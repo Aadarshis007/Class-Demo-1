@@ -9,7 +9,7 @@ body {
 }
 
 .firstHeader {
-    height:60px; 
+    height: 60px;
     width: 100%;
     background-color: black;
     display: flex;
@@ -17,24 +17,97 @@ body {
 }
 
 .phoneEmail {
-    width: 30%;
+    margin-left: 60px;
+}
+
+.nameLogout {
+    margin-right: 40px;
+}
+
+.phoneEmail,
+.nameLogout {
+    width: 25%;
     height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 48px;
     color: white;
-}
-.nameLogout {
-    width: 30%;
-    color: white;
-    height: 60px;
+    justify-content: space-around;
 }
 
-.phone, .email {
+.phone,
+.email {
     display: flex;
     height: 30px;
     vertical-align: middle;
     align-items: center;
     gap: 16px;
+}
+
+.phoneEmail label , 
+.nameLogout label {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: clamp(12px, 1.2vw, 20px);
+    
+}
+
+.logout button {
+    height: 35px;
+    padding:  8px 16px;
+    border-radius: 5px;
+    background-color: #1488CC;
+    border: 1px solid #1488CC;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.secondHeader {
+    width: 90%;
+    height: 120px;
+    padding: 0px 5%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hyperLinks {
+    width: 40%;
+    height: auto;
+}
+
+.hyperLinks ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.hyperLinks ul li:hover {
+    color: #1488CC;
+    cursor: pointer;
+}
+
+.contactUsButton button{
+    padding:  12px 24px;
+    border-radius: 5px;
+    background-color: #1488CC;
+    border: 1px solid #1488CC;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.logo img {
+    width: clamp(80%, 20vw, 100%);
+    height: auto;
 }
