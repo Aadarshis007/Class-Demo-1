@@ -44,17 +44,17 @@ body {
     gap: 16px;
 }
 
-.phoneEmail label , 
+.phoneEmail label,
 .nameLogout label {
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: clamp(12px, 1.2vw, 20px);
-    
+
 }
 
 .logout button {
     height: 35px;
-    padding:  8px 16px;
+    padding: 8px 16px;
     border-radius: 5px;
     background-color: #1488CC;
     border: 1px solid #1488CC;
@@ -96,8 +96,9 @@ body {
     cursor: pointer;
 }
 
-.contactUsButton button{
-    padding:  12px 24px;
+.contactUsButton button,
+.flexLearning .leftComponent .registerButton button {
+    padding: 12px 24px;
     border-radius: 5px;
     background-color: #1488CC;
     border: 1px solid #1488CC;
@@ -110,4 +111,110 @@ body {
 .logo img {
     width: clamp(80%, 20vw, 100%);
     height: auto;
+}
+
+.flexLearning {
+    height: auto;
+    width: 90%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.flexLearning .rightComponent {
+    width: 70%;
+    height: auto;
+}
+
+.flexLearning .rightComponent img {
+    height: auto;
+    width: 100%;
+    min-width: 500px;
+}
+
+.flexLearning .leftComponent {
+    width: 30%;
+    min-width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flexLearning .leftComponent .flexLearn {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: clamp(40px, 4vw, 80px);
+    font-weight: 400;
+    color: #1488CC;
+    line-height: 96px;
+}
+
+.flexLearning .leftComponent .secondHeading {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(20px, 2vw, 40px);
+    font-weight: 500;
+    line-height: 55px;
+}
+
+.flexLearning .leftComponent .registerButton {
+    margin-top: 35px;
+}
+
+.featuredCourses {
+    width: 90%;
+    padding: 0px 5%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.featuredCourses .headingLabels {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.featuredCourses .headingLabels label:first-child {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1488CC;
+}
+
+.featuredCourses .headingLabels label:last-child {
+    font-family: "Inter", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: black;
+}
+
+.categoryCourses {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.category {
+    width: 100%;
+    height: auto;
+}
+
+.category ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+
+.cardsCourses {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: red;
 }
