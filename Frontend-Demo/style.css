@@ -260,7 +260,8 @@ body {
     gap: 24px;
 }
 
-.courseInfo label:nth-child(1) span {
+.courseInfo label:nth-child(1) span,
+.rightComponentsList label:nth-child(1) {
     border: 2px solid #1488CC;
     color: #1488CC;
     border-radius: 50px;
@@ -271,7 +272,8 @@ body {
     line-height: 20px;
 }
 
-.courseInfo label:nth-child(2) {
+.courseInfo label:nth-child(2),
+.rightComponentsList label:nth-child(2) {
     font-family: "Inter", sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -279,7 +281,8 @@ body {
     text-align: left;
 }
 
-.courseInfo label:nth-child(3) {
+.courseInfo label:nth-child(3),
+.rightComponentsList label:nth-child(3) {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -305,7 +308,8 @@ body {
     justify-content: flex-end;
 }
 
-.learnMore label {
+.learnMore label,
+.rightComponentsList label:nth-child(4) {
     padding-right: 16px;
     display: flex;
     align-items: center;
@@ -520,4 +524,113 @@ body {
 .searching img {
     position: absolute;
     right: 0;
+}
+
+.cardCourses-2 {
+    justify-content: space-evenly;
+    padding: 50px 5%;
+    width: 90%;
+}
+
+.listViewCourses {
+    padding: 5%;
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.listCard {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    height: 300px;
+    border-bottom: 1px solid #DADADA;
+}
+
+.leftImageList {
+    width: 20%;
+    height: auto;
+}
+
+.leftImageList img {
+    height: auto;
+    width: 100%;
+    min-width: 200px;
+    border-radius: 10px;
+}
+
+.rightComponentsList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    height: 80%;
+}
+
+.rightComponentsList label:nth-child(4) {
+    color: rgba(20, 136, 204, 1);
+}
+
+@media (width<=1200px) {
+    .topDetails {
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .logoAndInfo {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .linksAndMore {
+        width: 100%;
+        gap: 40px;
+    }
+
+    .footer {
+        width: 95%;
+        padding: 50px 2.5%;
+    }
+}
+
+@media (width<=700px) {
+    .listCard {
+        flex-direction: column;
+        height: 500px;
+    }
+
+    .leftImageList {
+        width: 100%;
+        height: auto;
+    }
+
+    .leftImageList img {
+        width: 100%;
+        max-height: 200px;
+        height: auto;
+    }
+
+    .listViewCourses {
+        gap: 35px;
+    }
+
+    .linksAndMore {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .linksAndMore div:nth-child(1),
+    .linksAndMore div:nth-child(2),
+    .linksAndMore div:nth-child(3) {
+        width: 100%;
+    }
+
+    .footer {
+        width: 90%;
+        padding: 50px 5%;
+    }
 }
