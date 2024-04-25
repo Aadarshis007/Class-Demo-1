@@ -47,10 +47,10 @@
             <div class="hyperLinks">
                 <ul>
                     <a href="./home.html">
-                        <li>Home</li>
+                        <li id="homeLink">Home</li>
                     </a>
                     <a href="./courses.html">
-                        <li>Courses</li>
+                        <li id="coursesLink">Courses</li>
                     </a>
                     <a href="">
                         <li>Inquiry</li>
@@ -71,19 +71,22 @@
         <img class="coursesMainImage" src="./Courses.png" alt="">
         <div class="entriesSearch">
             <div class="entrySorting">
-                <img src="./gridViewIcon.png" alt="">
-                <img src="./listViewicon.png" alt="">
+                <img onclick="gridList('grid')" id="gridViewIcon" src="./gridViewIcon.png" alt="">
+                <img onclick="gridList('list')" id="listViewIcon" src="./listViewicon.png" alt="">
                 <label>
                     <span>
                         Showing
                     </span>
                     <span>
-                        1-6
+                        1-
+                    </span>
+                    <span id="totalShowCount">
+                        0
                     </span>
                     <span>
                         of
                     </span>
-                    <span>
+                    <span id="totalGridCount">
                         10
                     </span>
                     <span>
@@ -92,17 +95,18 @@
                 </label>
             </div>
             <div class="searching">
-                <input type="text" placeholder="Search">
+                <input type="text" onkeyup="searchResult()" id="searchInput" placeholder="Search">
                 <img src="./Search.png" alt="">
             </div>
         </div>
-        <!-- <div class="cardsCourses cardCourses-2">
+        <div class="cardsCourses cardCourses-2" id="gridView">
             <div class="mainCard">
                 <div class="courseImg">
                     <img src="/Frontend-Demo/firstCardImage.png" alt="">
                 </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
+                <div  class="courseInfo"  id="courseInfo">
+
+                    <label><span id="category">Artificial Intelligence</span></label>
                     <label>Introduction to Machine Learning using Python (Linear Regression)</label>
                     <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>
                         <span>
@@ -111,60 +115,16 @@
                     </label>
                 </div>
                 <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/secondCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/secondCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/lastCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-
+                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png" alt=""></span></label>
                 </div>
             </div>
             <div class="mainCard">
                 <div class="courseImg">
                     <img src="/Frontend-Demo/firstCardImage.png" alt="">
                 </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
+                <div  class="courseInfo"  id="courseInfo">
+
+                    <label><span id="category">software Development</span></label>
                     <label>Introduction to Machine Learning using Python (Linear Regression)</label>
                     <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>
                         <span>
@@ -173,60 +133,16 @@
                     </label>
                 </div>
                 <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/secondCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/secondCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/lastCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-
+                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png" alt=""></span></label>
                 </div>
             </div>
             <div class="mainCard">
                 <div class="courseImg">
                     <img src="/Frontend-Demo/firstCardImage.png" alt="">
                 </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
+                <div  class="courseInfo"  id="courseInfo">
+
+                    <label><span id="category">Cyber Security</span></label>
                     <label>Introduction to Machine Learning using Python (Linear Regression)</label>
                     <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>
                         <span>
@@ -235,161 +151,157 @@
                     </label>
                 </div>
                 <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
+                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png" alt=""></span></label>
                 </div>
             </div>
             <div class="mainCard">
                 <div class="courseImg">
-                    <img src="/Frontend-Demo/secondCard.png" alt="">
+                    <img src="/Frontend-Demo/firstCardImage.png" alt="">
                 </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
+                <div  class="courseInfo"  id="courseInfo">
+
+                    <label><span id="category">Database Management  </span></label>
                     <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
+                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>
+                        <span>
+                            10 weeks
+                        </span>
+                    </label>
                 </div>
                 <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
+                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png" alt=""></span></label>
                 </div>
             </div>
             <div class="mainCard">
                 <div class="courseImg">
-                    <img src="/Frontend-Demo/secondCard.png" alt="">
+                    <img src="/Frontend-Demo/firstCardImage.png" alt="">
                 </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
+                <div  class="courseInfo"  id="courseInfo">
+
+                    <label><span id="category">Artificial Intelligence</span></label>
                     <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
+                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>
+                        <span>
+                            10 weeks
+                        </span>
+                    </label>
                 </div>
                 <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-
-                </div>
-            </div>
-            <div class="mainCard">
-                <div class="courseImg">
-                    <img src="/Frontend-Demo/lastCard.png" alt="">
-                </div>
-                <div class="courseInfo">
-                    <label><span>Artificial Intelligence</span></label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label><span><img src="/Frontend-Demo/durationCourse.png" alt=""></span>10 weeks</label>
-                </div>
-                <div class="learnMore">
-                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png"
-                                alt=""></span></label>
-
-                </div>
-            </div>
-
-        </div> -->
-
-        <div class="listViewCourses">
-            <div class="listCard">
-                <div class="leftImageList">
-                    <img src="./firstCardImage.png" alt="">
-                </div>
-                <div class="rightComponentsList">
-                    <label>Artificial Intelligence</label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label>
-                        <span><img src="./durationCourse.png" alt=""></span>
-                        <span>10 weeks</span>
-                    </label>
-                    <label>
-                        <span>Learn More</span>
-                        <span><img src="./rightArrowCourses.png" alt=""></span>
-                    </label>
-                </div>
-            </div>
-            <div class="listCard">
-                <div class="leftImageList">
-                    <img src="./firstCardImage.png" alt="">
-                </div>
-                <div class="rightComponentsList">
-                    <label>Artificial Intelligence</label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label>
-                        <span><img src="./durationCourse.png" alt=""></span>
-                        <span>10 weeks</span>
-                    </label>
-                    <label>
-                        <span>Learn More</span>
-                        <span><img src="./rightArrowCourses.png" alt=""></span>
-                    </label>
-                </div>
-            </div>
-            <div class="listCard">
-                <div class="leftImageList">
-                    <img src="./firstCardImage.png" alt="">
-                </div>
-                <div class="rightComponentsList">
-                    <label>Artificial Intelligence</label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label>
-                        <span><img src="./durationCourse.png" alt=""></span>
-                        <span>10 weeks</span>
-                    </label>
-                    <label>
-                        <span>Learn More</span>
-                        <span><img src="./rightArrowCourses.png" alt=""></span>
-                    </label>
-                </div>
-            </div>
-            <div class="listCard">
-                <div class="leftImageList">
-                    <img src="./firstCardImage.png" alt="">
-                </div>
-                <div class="rightComponentsList">
-                    <label>Artificial Intelligence</label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label>
-                        <span><img src="./durationCourse.png" alt=""></span>
-                        <span>10 weeks</span>
-                    </label>
-                    <label>
-                        <span>Learn More</span>
-                        <span><img src="./rightArrowCourses.png" alt=""></span>
-                    </label>
-                </div>
-            </div>
-            <div class="listCard">
-                <div class="leftImageList">
-                    <img src="./firstCardImage.png" alt="">
-                </div>
-                <div class="rightComponentsList">
-                    <label>Artificial Intelligence</label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label>
-                        <span><img src="./durationCourse.png" alt=""></span>
-                        <span>10 weeks</span>
-                    </label>
-                    <label>
-                        <span>Learn More</span>
-                        <span><img src="./rightArrowCourses.png" alt=""></span>
-                    </label>
-                </div>
-            </div>
-            <div class="listCard">
-                <div class="leftImageList">
-                    <img src="./firstCardImage.png" alt="">
-                </div>
-                <div class="rightComponentsList">
-                    <label>Artificial Intelligence</label>
-                    <label>Introduction to Machine Learning using Python (Linear Regression)</label>
-                    <label>
-                        <span><img src="./durationCourse.png" alt=""></span>
-                        <span>10 weeks</span>
-                    </label>
-                    <label>
-                        <span>Learn More</span>
-                        <span><img src="./rightArrowCourses.png" alt=""></span>
-                    </label>
+                    <label><span>Learn More</span><span><img src="/Frontend-Demo/rightArrow.png" alt=""></span></label>
                 </div>
             </div>
         </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+    <div class="listViewCourses" id="listView">
+        <div class="listCard">
+            <div class="leftImageList">
+                <img src="./firstCardImage.png" alt="">
+            </div>
+            <div class="rightComponentsList">
+                <label>Artificial Intelligence</label>
+                <label>Introduction to Machine Learning using Python (Linear Regression)</label>
+                <label>
+                    <span><img src="./durationCourse.png" alt=""></span>
+                    <span>10 weeks</span>
+                </label>
+                <label>
+                    <span>Learn More</span>
+                    <span><img src="./rightArrowCourses.png" alt=""></span>
+                </label>
+            </div>
+        </div>
+        <div class="listCard">
+            <div class="leftImageList">
+                <img src="./firstCardImage.png" alt="">
+            </div>
+            <div class="rightComponentsList">
+                <label>Artificial Intelligence</label>
+                <label>Introduction to Machine Learning using Python (Linear Regression)</label>
+                <label>
+                    <span><img src="./durationCourse.png" alt=""></span>
+                    <span>10 weeks</span>
+                </label>
+                <label>
+                    <span>Learn More</span>
+                    <span><img src="./rightArrowCourses.png" alt=""></span>
+                </label>
+            </div>
+        </div>
+        <div class="listCard">
+            <div class="leftImageList">
+                <img src="./firstCardImage.png" alt="">
+            </div>
+            <div class="rightComponentsList">
+                <label>Artificial Intelligence</label>
+                <label>Introduction to Machine Learning using Python (Linear Regression)</label>
+                <label>
+                    <span><img src="./durationCourse.png" alt=""></span>
+                    <span>10 weeks</span>
+                </label>
+                <label>
+                    <span>Learn More</span>
+                    <span><img src="./rightArrowCourses.png" alt=""></span>
+                </label>
+            </div>
+        </div>
+        <div class="listCard">
+            <div class="leftImageList">
+                <img src="./firstCardImage.png" alt="">
+            </div>
+            <div class="rightComponentsList">
+                <label>Artificial Intelligence</label>
+                <label>Introduction to Machine Learning using Python (Linear Regression)</label>
+                <label>
+                    <span><img src="./durationCourse.png" alt=""></span>
+                    <span>10 weeks</span>
+                </label>
+                <label>
+                    <span>Learn More</span>
+                    <span><img src="./rightArrowCourses.png" alt=""></span>
+                </label>
+            </div>
+        </div>
+        <div class="listCard">
+            <div class="leftImageList">
+                <img src="./firstCardImage.png" alt="">
+            </div>
+            <div class="rightComponentsList">
+                <label>Artificial Intelligence</label>
+                <label>Introduction to Machine Learning using Python (Linear Regression)</label>
+                <label>
+                    <span><img src="./durationCourse.png" alt=""></span>
+                    <span>10 weeks</span>
+                </label>
+                <label>
+                    <span>Learn More</span>
+                    <span><img src="./rightArrowCourses.png" alt=""></span>
+                </label>
+            </div>
+        </div>
+        <div class="listCard">
+            <div class="leftImageList">
+                <img src="./firstCardImage.png" alt="">
+            </div>
+            <div class="rightComponentsList">
+                <label>Artificial Intelligence</label>
+                <label>Introduction to Machine Learning using Python (Linear Regression)</label>
+                <label>
+                    <span><img src="./durationCourse.png" alt=""></span>
+                    <span>10 weeks</span>
+                </label>
+                <label>
+                    <span>Learn More</span>
+                    <span><img src="./rightArrowCourses.png" alt=""></span>
+                </label>
+            </div>
+        </div>
+    </div>
     </div>
     <div class="footer">
         <div class="topDetails">
@@ -453,10 +365,11 @@
         </div>
         <div class="copyrightinfo">
             <label>&copy Copyright</label>
-            <label>2024</label>
+            <label id="latestYear"></label>
             <label>, All Rights Reserved</label>
         </div>
     </div>
 </body>
+<script src="./coursesScript.js"></script>
 
 </html>

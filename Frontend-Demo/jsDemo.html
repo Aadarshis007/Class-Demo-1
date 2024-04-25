@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv" style="height: 100px;width: 100px;background-color: red;" onmouseover="mourseOver()" onmouseout="mouseOut()">
+        <button>click me</button>
+        <input type="text" onkeydown="keyPress()" name="" id="inputBox">
+    </div>
+</body>
+<script>
+    function mourseOver() {
+        document.getElementById("mainDiv").style.backgroundColor = "black"
+    }
+    function mouseOut() {
+        document.getElementById("mainDiv").style.backgroundColor = "red"
+    }
+
+    function keyPress() {
+        count = document.getElementById("inputBox").value
+        console.log("length of input :", count.length);
+        console.log("4th letter :", count[4]);
+    }
+</script>
+</html>

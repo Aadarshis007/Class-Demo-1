@@ -500,6 +500,13 @@ body {
     align-items: center;
 }
 
+.entrySorting label {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+}
+
 .searching input {
     height: 100%;
     width: 100%;
@@ -536,7 +543,7 @@ body {
     padding: 5%;
     height: auto;
     width: 90%;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
 }
@@ -572,6 +579,10 @@ body {
 
 .rightComponentsList label:nth-child(4) {
     color: rgba(20, 136, 204, 1);
+}
+
+.activeLinkClass {
+    color: #1488CC;
 }
 
 @media (width<=1200px) {
