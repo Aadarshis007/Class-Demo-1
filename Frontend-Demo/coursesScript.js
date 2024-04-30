@@ -1,6 +1,3 @@
-document.getElementById("totalShowCount").innerText = document.getElementById("gridView").childElementCount;
-document.getElementById("totalGridCount").innerText = document.getElementById("gridView").childElementCount;
-
 function gridList(gridlist) {
   if (gridlist == "grid") {
     document.getElementById("gridViewIcon").src = "gridViewIcon.png";
@@ -18,7 +15,13 @@ function gridList(gridlist) {
 if (window.location.href.includes("courses.html")) {
   console.log("courses.html");
   document.getElementById("coursesLink").style.color = "#1488CC";
+  document.getElementById("totalShowCount").innerText = document.getElementById("gridView").childElementCount;
+  document.getElementById("totalGridCount").innerText = document.getElementById("gridView").childElementCount;
   // document.getElementById("coursesLink").classList.add("activeLinkClass");
+}
+else if (window.location.href.includes("courses-main.html")) {
+  document.getElementById("coursesLink").style.color = "#1488CC";
+  
 }
 //  else if (window.location.href.includes("home.html")) {
 //   document.getElementById("homeLink").style.color = "#1488CC";
@@ -27,19 +30,19 @@ if (window.location.href.includes("courses.html")) {
 //   console.log("not success");
 // }
 
-x=54
-y=40
+// x=54
+// y=40
 
-if (x+y !== 100) {
-  console.log(x-=y);
-  console.log(x);
-}
-else {
-  console.log("below the range");
-}
+// if (x+y !== 100) {
+//   console.log(x-=y);
+//   console.log(x);
+// }
+// else {
+//   console.log("below the range");
+// }
 
 // x+y<=100?console.log("iinside if"):console.log("inside else");
 
 document.getElementById("latestYear").innerText = new Date().getFullYear()
 
-function searchResult() {}
+// function searchResult() {}
