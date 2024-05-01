@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Demo</title>
+    <link rel="stylesheet" href="/Frontend-Demo/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="headerMain">
+        <div class="firstHeader">
+            <div class="phoneEmail">
+                <div class="phone">
+                    <img src="/phone.png" alt="">
+                    <label>(+1) 123-456-7890</label>
+                </div>
+                <div class="email">
+                    <img src="/email.png" alt="">
+                    <label>demo@gmail.com</label>
+                </div>
+            </div>
+            <div class="nameLogout">
+                <div class="name">
+                    <label>
+                        Amitabh Bachhan
+                    </label>
+                </div>
+                <div class="logout">
+                    <button>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="secondHeader">
+            <div class="logo">
+                <img src="/Frontend-Demo/MainLogo.png" alt="">
+            </div>
+            <div class="hyperLinks">
+                <ul>
+                    <a href="./home.html">
+                        <li id="homeLink">Home</li>
+                    </a>
+                    <a href="./courses.html">
+                        <li id="coursesLink">Courses</li>
+                    </a>
+                    <a href="">
+                        <li>Inquiry</li>
+                    </a>
+                    <a href="">
+                        <li>About Us</li>
+                    </a>
+                </ul>
+            </div>
+            <div class="contactUsButton">
+                <button>
+                    Contact Us
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="coursesFirstDiv">
+        <img class="coursesMainImage" src="./InquiryMain.png" alt="">
+    </div>
+    <div class="inquiryMain">
+        <div class="left-image-inquiry">
+            <img src="./inquiryleftImage.png" alt="">
+        </div>
+        <div class="right-inquiry-form">
+            <label>Inquiry Form</label>
+            <div class="full-name">
+                <label>Full Name <span>*</span></label>
+                <input id="fullName" type="text" placeholder="Full Name">
+            </div>
+            <div class="email">
+                <label>Email <span>*</span></label>
+                <input id="email" type="text" placeholder="Email">
+            </div>
+            <div class="phone">
+                <label>Phone <span>*</span></label>
+                <input id="phone" type="text" placeholder="Phone No.">
+            </div>
+            <div class="education">
+                <label>Level Of Education <span>*</span></label>
+                <select name="" id="education">
+                    <option value="select">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="course">
+                <label>Course Interested <span>*</span></label>
+                <select name="" id="courseInterested">
+                    <option value="select">Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="subscribe">
+                <input type="checkbox" name="" id="subscribe">
+                <label>I subscribe to send me update and information by email.</label>
+            </div>
+            <div class="submitinquiry"><button onclick="formDetails()">Submit</button></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="topDetails">
+            <div class="logoAndInfo">
+                <img src="/Frontend-Demo/slLOGO.png" alt="">
+                <label>We offer high quality advanced training and are unswerving to providing the best training
+                    facilities to our students.</label>
+                <div class="socialMedia">
+                    <a href="https://www.facebook.com">
+                        <img src="/Frontend-Demo/facebook.png" alt="">
+                    </a>
+                    <a href="https://www.linkedin.com">
+                        <img src="/Frontend-Demo/linkedin.png" alt="">
+                    </a>
+                    <a href="https://www.instagram.com">
+                        <img src="/Frontend-Demo/instagram.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="linksAndMore">
+                <div class="links">
+                    <label>Links</label>
+                    <label>About Us</label>
+                    <label>Become an Instructor</label>
+                    <label>Courses</label>
+                    <label>Inquiry</label>
+                </div>
+                <div class="contactUsUSA">
+                    <label>Contact Us (USA)</label>
+                    <label>
+                        <span><img src="./phone.png" alt=""></span>
+                        <span>(+1) 123 456 7890</span>
+                    </label>
+                    <label>
+                        <span><img src="./email.png" alt=""></span>
+                        <span>demo@gmail.com</span>
+                    </label>
+                    <label>
+                        <span><img src="./location.png" alt=""></span>
+                        <span>Lorem ipsum dolor sit amet consectetur. Facilisis sed justo a metus morbi varius
+                            dictum.</span>
+                    </label>
+                </div>
+                <div class="contactUsINDIA">
+                    <label>Contact Us (INDIA)</label>
+                    <label>
+                        <span><img src="./phone.png" alt=""></span>
+                        <span>(+1) 123 456 7890</span>
+                    </label>
+                    <label>
+                        <span><img src="./email.png" alt=""></span>
+                        <span>demo@gmail.com</span>
+                    </label>
+                    <label>
+                        <span><img src="./location.png" alt=""></span>
+                        <span>Lorem ipsum dolor sit amet consectetur. Facilisis sed justo a metus morbi varius
+                            dictum.</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="copyrightinfo">
+            <label>&copy Copyright</label>
+            <label id="latestYear"></label>
+            <label>, All Rights Reserved</label>
+        </div>
+    </div>
+</body>
+<script src="./inquiry.js"></script>
+
+</html>

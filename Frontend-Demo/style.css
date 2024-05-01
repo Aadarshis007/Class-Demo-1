@@ -111,6 +111,7 @@ body {
 .leftLabelsAndButtons button,
 .inquiry-button button,
 .sendMessageButton button,
+.submitinquiry button,
 .flexLearning .leftComponent .registerButton button {
     padding: 12px 24px;
     border-radius: 5px;
@@ -120,6 +121,7 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 600;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .logo img {
@@ -961,6 +963,173 @@ body {
     display: flex;
     align-items: center;
     gap: 32px;
+}
+
+.aboutUsMain {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.ourMission {
+    height: auto;
+    width: 90%;
+    padding: 5%;
+    display: flex;
+    gap: 20px;
+}
+
+.ourMission>div:first-child {
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ourMission>div:first-child label:first-child {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.73px;
+    color: #1488CC;
+}
+
+.ourMission>div:first-child label:last-child {
+    font-family: "Inter", sans-serif;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 90px;
+}
+
+.ourMission>div:last-child p {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #676767;
+}
+
+.ourMission>div:last-child {
+    width: 60%;
+    height: auto;
+}
+
+.numberInfo {
+    background: linear-gradient(90deg, #314755 0%, #26A0DA 100%);
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.numberInfo>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.numberInfo>div label:first-child {
+    font-family: "Expletus Sans", sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 85.7px;
+}
+
+.numberInfo>div label:last-child {
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 48.41px;
+}
+
+.inquiryMain {
+    height: auto;
+    width: 90%;
+    padding: 5% 5% 0 5%;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.inquiryMain>div:first-child {
+    width: 30%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inquiryMain>div:last-child {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.inquiryMain>div:last-child>div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    height: auto;
+}
+
+.inquiryMain>div:last-child>div>label,
+.inquiryMain>div:last-child>div>input,
+.inquiryMain>div:last-child>div>select {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+}
+
+.inquiryMain>div:last-child>div>label>span {
+    color: red;
+}
+
+.inquiryMain>div:last-child>div:last-child {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: flex-end;
+}
+
+.inquiryMain>div:last-child>div>input,
+.inquiryMain>div:last-child>div>select {
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1.5px solid #E0E0E0;
+}
+
+.inquiryMain>div:last-child>div>select {
+    background-color: transparent;
+}
+
+.right-inquiry-form>label {
+    width: 100%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38.73px;
+}
+
+.inquiryMain>div:last-child>div:nth-child(7) {
+    flex-direction: row;
+    align-items: center;
+}
+
+.inquiryMain>div:last-child>div:nth-child(7)>input {
+    width: 20px;
+    height: 20px;
 }
 
 @media (width<=1200px) {
