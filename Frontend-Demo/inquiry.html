@@ -15,6 +15,19 @@
 </head>
 
 <body>
+    <div class="successPopupOuter" id="successPopup">
+        <div class="successPopupInner">
+            <div class="topNameButton">
+                <label>Success</label>
+            </div>
+            <div class="centerMessage">
+                <label>your Data Submitted Successfully.</label>
+            </div>
+            <div class="buttonPopup">
+                <button onclick="popupMessage('close')">Close</button>
+            </div>
+        </div>
+    </div>
     <div class="headerMain">
         <div class="firstHeader">
             <div class="phoneEmail">
@@ -75,44 +88,46 @@
             <img src="./inquiryleftImage.png" alt="">
         </div>
         <div class="right-inquiry-form">
-            <label>Inquiry Form</label>
-            <div class="full-name">
-                <label>Full Name <span>*</span></label>
-                <input id="fullName" type="text" placeholder="Full Name">
-            </div>
-            <div class="email">
-                <label>Email <span>*</span></label>
-                <input id="email" type="text" placeholder="Email">
-            </div>
-            <div class="phone">
-                <label>Phone <span>*</span></label>
-                <input id="phone" type="text" placeholder="Phone No.">
-            </div>
-            <div class="education">
-                <label>Level Of Education <span>*</span></label>
-                <select name="" id="education">
-                    <option value="select">Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div>
-            <div class="course">
-                <label>Course Interested <span>*</span></label>
-                <select name="" id="courseInterested">
-                    <option value="select">Select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                </select>
-            </div>
-            <div class="subscribe">
-                <input type="checkbox" name="" id="subscribe">
-                <label>I subscribe to send me update and information by email.</label>
-            </div>
-            <div class="submitinquiry"><button onclick="formDetails()">Submit</button></div>
+            <form action="" id="myForm">
+                <label>Inquiry Form</label>
+                <div class="full-name">
+                    <label>Full Name <span>*</span></label>
+                    <input id="fullName" type="text" placeholder="Full Name">
+                </div>
+                <div class="email">
+                    <label>Email <span>*</span></label>
+                    <input id="email" type="text" placeholder="Email">
+                </div>
+                <div class="phone">
+                    <label>Phone <span>*</span></label>
+                    <input id="phone" type="text" placeholder="Phone No.">
+                </div>
+                <div class="education">
+                    <label>Level Of Education <span>*</span></label>
+                    <select name="" id="education">
+                        <option value="select">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="course">
+                    <label>Course Interested <span>*</span></label>
+                    <select name="" id="courseInterested">
+                        <option value="select">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+                <div class="subscribe">
+                    <input type="checkbox" name="" id="subscribe">
+                    <label>I subscribe to send me update and information by email.</label>
+                </div>
+                <div class="submitinquiry"><button onclick="popupMessage('open')">Submit</button></div>
+            </form>
         </div>
     </div>
     <div class="footer">
