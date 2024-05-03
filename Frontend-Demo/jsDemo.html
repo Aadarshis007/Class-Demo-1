@@ -1,28 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .mainDiv {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .formTitle {
+            font-size: 30px;
+            font-weight: 800;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="mainDiv" style="height: 100px;width: 100px;background-color: red;" onmouseover="mourseOver()" onmouseout="mouseOut()">
+    <!-- <div id="mainDiv" style="height: 100px;width: 100px;background-color: red;" onmouseover="mourseOver()" onmouseout="mouseOut()">
         <button>click me</button>
         <input type="text" onkeydown="keyPress()" name="" id="inputBox">
+    </div> -->
+    <div class="mainDiv">
+        <label class="formTitle">Basic Form</label>
+        <input type="number" name="" id="input">
+        <label><span id="dollar">100 </span>  dollars is  <span id="rupee"> 10000 </span>  in rupees.</label>
+        <!-- <input type="text" name="" id="fullName" onkeyup="validation()"><span style="display: none;" id="fullnameSpan">Full Name is More than 2
+            words</span>
+        <input type="text" name="" id="email"onkeyup="validation()"><span style="display: none;" id="emailSpan">Email is not Valid.</span>
+        <input type="pass" name="" id="password"onkeyup="validation()"><span style="display: none;" id="passwordSpan">Password is not
+            secure</span>
+        <button onclick="validation()">Submit</button> -->
     </div>
+
 </body>
 <script>
-    function mourseOver() {
-        document.getElementById("mainDiv").style.backgroundColor = "black"
-    }
-    function mouseOut() {
-        document.getElementById("mainDiv").style.backgroundColor = "red"
+
+    input = document.getElementById("input")
+    dollar = document.getElementById("dollar")
+    rupee = document.getElementById("rupee")
+    exchangeRate = 83
+
+    input.onkeyup = function() {
+        finalValue = input.value * exchangeRate
+        dollar.innerText = input.value
+        rupee.innerText = finalValue
     }
 
-    function keyPress() {
-        count = document.getElementById("inputBox").value
-        console.log("length of input :", count.length);
-        console.log("4th letter :", count[4]);
-    }
+    // function validation() {
+    //     fullname = document.getElementById("fullName").value
+    //     fullnameSpan = document.getElementById("fullnameSpan")
+    //     email = document.getElementById("email").value
+    //     emailSpan = document.getElementById("emailSpan")
+    //     password = document.getElementById("password").value
+    //     passwordSpan = document.getElementById("passwordSpan")
+
+    //     validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    //     validPasswordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/
+    //     // lowercaseRegex = /[a-z]/g
+    //     // uppercaseRegex = /[A-Z]/g
+    //     // numberRegex = /[0-9]/g
+
+
+    //     // full name validation
+
+    //     if (fullname.split(" ").length > 2) {
+    //         fullnameSpan.style.display = "block"
+    //     }
+    //     else {
+    //         fullnameSpan.style.display = "none"
+    //     }
+
+    //     // email validation
+
+    //     if (email.match(validRegex)) {
+    //         emailSpan.style.display = "none"
+    //     }
+    //     else {
+    //         emailSpan.style.display = "block"
+
+    //     }
+
+    //     // password validation
+
+    //     if (password.match(validPasswordRegex)) {
+    //         passwordSpan.style.display = "none"
+    //     }
+    //     else {
+    //         passwordSpan.style.display = "block"
+
+    //     }
+    // }
+    // function mourseOver() {
+    //     document.getElementById("mainDiv").style.backgroundColor = "black"
+    // }
+    // function mouseOut() {
+    //     document.getElementById("mainDiv").style.backgroundColor = "red"
+    // }
+
+    // function keyPress() {
+    //     count = document.getElementById("inputBox").value
+    //     console.log("length of input :", count.length);
+    //     console.log("4th letter :", count[4]);
+    // }
+
 </script>
+
 </html>
